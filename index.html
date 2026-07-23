@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>document.documentElement.classList.add('js');</script>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Channel Technologies, Inc. — Nationwide Banking &amp; Retail Technology Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- persistent channel line, drawn once, followed by JS-driven progress -->
+<div class="channel-rail" aria-hidden="true">
+  <svg viewBox="0 0 4 100" preserveAspectRatio="none" class="channel-rail__track">
+    <line x1="2" y1="0" x2="2" y2="100" vector-effect="non-scaling-stroke"/>
+  </svg>
+  <svg viewBox="0 0 4 100" preserveAspectRatio="none" class="channel-rail__progress">
+    <line x1="2" y1="0" x2="2" y2="100" vector-effect="non-scaling-stroke"/>
+  </svg>
+  <span class="channel-rail__pulse"></span>
+</div>
+
+<header class="site-header" id="top">
+  <div class="bar">
+    <div class="bar__contact">
+      <span>+63 2 8772-2951</span>
+      <span class="dot">/</span>
+      <span>info@channeltechnologies.net</span>
+    </div>
+    <div class="bar__tag">2‑2‑0‑0 Service Level · Nationwide</div>
+  </div>
+  <nav class="nav">
+    <a class="logo" href="#top">
+      <img class="logo__img" src="res/logo.png" alt="Channel Technologies Inc.">
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#capabilities">Capabilities</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#partners">Partners</a></li>
+      <li><a href="#offices">Offices</a></li>
+      <li><a class="nav__cta" href="#offices">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <span class="hero__watermark" aria-hidden="true">CHANNEL</span>
+
+    <!-- dot-cluster decoration, straight from the brand's gradient-tone motif -->
+    <svg class="dot-cluster dot-cluster--hero" viewBox="0 0 220 220" aria-hidden="true">
+      <circle cx="150" cy="40"  r="16" fill="var(--orange)"/>
+      <circle cx="185" cy="70"  r="9"  fill="var(--red)"/>
+      <circle cx="120" cy="75"  r="7"  fill="var(--red-tint)"/>
+      <circle cx="195" cy="30"  r="6"  fill="var(--orange-tint)"/>
+      <circle cx="60"  cy="30"  r="10" fill="var(--orange-tint)"/>
+      <circle cx="165" cy="110" r="12" fill="var(--red)"/>
+      <circle cx="205" cy="115" r="7"  fill="var(--grey)"/>
+      <circle cx="100" cy="30"  r="5"  fill="var(--red-tint)"/>
+      <circle cx="35"  cy="65"  r="6"  fill="var(--grey)"/>
+      <circle cx="140" cy="150" r="8"  fill="var(--orange)"/>
+    </svg>
+
+    <div class="hero__badge" aria-hidden="true">
+      <svg viewBox="0 0 100 100" class="hero__badge-ring">
+        <path id="badgeCircle" fill="none" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"/>
+        <text font-size="8.6" font-family="IBM Plex Mono" letter-spacing="1.5" fill="var(--ink)">
+          <textPath href="#badgeCircle" startOffset="0%">SINCE 1993 · 25+ YEARS RUNNING · SINCE 1993 · </textPath>
+        </text>
+      </svg>
+      <span class="hero__badge-core">CT</span>
+    </div>
+
+    <div class="hero__node node" data-node="00">
+      <span class="node__ring"></span>
+    </div>
+    <p class="eyebrow mono"><span class="live-dot" aria-hidden="true"></span>SIGNAL 00 — ON AIR SINCE 1993</p>
+    <h1 class="hero__title">
+      Keeping the Philippines'<br>
+      financial network <span class="accent accent--underline">running.</span>
+    </h1>
+    <p class="hero__lede">
+      Channel Technologies, Inc. maintains the machines your money moves through —
+      ATMs, POS terminals, HSMs, and the network gear behind them — from 30+ branches
+      and depots strategically positioned across the country.
+    </p>
+    <div class="hero__actions">
+      <a href="#offices" class="btn btn--solid"><span>Contact Us</span><i class="btn__arrow">→</i></a>
+      <a href="#overview" class="btn btn--ghost"><span>Read the Overview</span></a>
+    </div>
+    <div class="hero__strip mono">
+      <span>ATM &amp; POS MAINTENANCE</span>
+      <span>HSM &amp; ENCRYPTION</span>
+      <span>NETWORK EQUIPMENT</span>
+      <span>CYBERSECURITY</span>
+      <span>LOYALTY SYSTEMS</span>
+    </div>
+    <span class="section-num" aria-hidden="true">00</span>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat stat--ink">
+      <span class="stat__glyph mono">EST.</span>
+      <span class="stat__num" data-count="1993">0</span>
+      <span class="stat__label">Year founded</span>
+    </div>
+    <div class="stat stat--red">
+      <span class="stat__glyph mono">▲</span>
+      <span class="stat__num" data-count="25" data-suffix="+">0</span>
+      <span class="stat__label">Years in banking &amp; retail</span>
+    </div>
+    <div class="stat stat--orange">
+      <span class="stat__glyph mono">◆</span>
+      <span class="stat__num" data-count="30" data-suffix="+">0</span>
+      <span class="stat__label">Branches &amp; depots nationwide</span>
+    </div>
+    <div class="stat stat--grey">
+      <span class="stat__glyph mono">⚡</span>
+      <span class="stat__num" data-count="2" data-suffix="hr">0</span>
+      <span class="stat__label">Response &amp; repair target</span>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="overview" id="overview">
+    <div class="node" data-node="01"><span class="node__ring"></span></div>
+    <p class="eyebrow mono">SIGNAL 01 — COMPANY OVERVIEW</p>
+    <div class="overview__grid">
+      <div class="overview__intro">
+        <h2>One group,<br><span class="highlight-swipe">two disciplines.</span></h2>
+        <p>
+          The Channel Group of Companies was established in 1993 and has spent more
+          than 25 years serving the Philippine banking and retail industries. As one
+          of the country's pioneer third‑party service providers, the group built a
+          genuinely nationwide footprint and became the trusted local partner for
+          global technology leaders including Thales, Hyosung, ACI, OKI, SmartPeak,
+          SNBC, and Xceptor.
+        </p>
+      </div>
+      <div class="overview__cards">
+        <article class="entity-card entity-card--red tilt-card">
+          <span class="entity-card__tag mono">CTI</span>
+          <h3>Channel Technologies, Inc.</h3>
+          <p>
+            The country's leading provider of network and self‑service equipment
+            maintenance — the only company able to service such a wide range of
+            network hardware. CTI runs 30+ branches and depots nationwide and
+            recently engineered the first Philippine‑made ATM.
+          </p>
+        </article>
+        <article class="entity-card entity-card--orange tilt-card">
+          <span class="entity-card__tag mono">CSI</span>
+          <h3>Channel Solutions, Inc.</h3>
+          <p>
+            Formed in the early 2000s as the group's software and professional
+            services arm, CSI builds custom financial‑industry applications and
+            delivers project management, systems integration, and consulting.
+          </p>
+        </article>
+      </div>
+    </div>
+    <div class="credential-strip">
+      <ul class="partner-track partner-track--reverse">
+        <li class="pill pill--light-ink">FIPS 140‑2</li><li class="pill pill--light-red">PCI‑DSS</li><li class="pill pill--light-orange">ISO 27001</li>
+        <li class="pill pill--light-red">2‑2‑0‑0 SLA</li><li class="pill pill--light-ink">30+ BRANCHES</li><li class="pill pill--light-orange">EST. 1993</li>
+        <li class="pill pill--light-ink">FIPS 140‑2</li><li class="pill pill--light-red">PCI‑DSS</li><li class="pill pill--light-orange">ISO 27001</li>
+        <li class="pill pill--light-red">2‑2‑0‑0 SLA</li><li class="pill pill--light-ink">30+ BRANCHES</li><li class="pill pill--light-orange">EST. 1993</li>
+      </ul>
+    </div>
+    <span class="section-num" aria-hidden="true">01</span>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="node" data-node="02"><span class="node__ring"></span></div>
+    <p class="eyebrow mono">SIGNAL 02 — ABOUT US</p>
+    <div class="about__grid">
+      <div class="about__col">
+        <h2>Vision, evolution, and<br><span class="highlight-swipe">purpose‑driven innovation.</span></h2>
+        <p>
+          The Channel Group of Companies began its journey in 1993, founded by
+          Manuel S. Bagatsing (MSB) — a non‑technical entrepreneur with a sharp
+          eye for pain points in the banking sector. His focus on cost‑effective
+          banking‑system hardware maintenance built the group's early reputation
+          as a trusted industry partner.
+        </p>
+        <p>
+          As digital transformation accelerated in the early 2000s, MSB moved the
+          group toward a more software‑driven landscape. In 2003, Channel Technologies
+          launched its software and professional services arm, Channel Solutions
+          Inc., to meet growing demand for agile solutions across enterprise resource
+          planning, loan management, and digital transformation — and it quickly
+          became a leading provider of Software Lifecycle Management (SLM) for
+          banking, retail, cooperatives, and beyond.
+        </p>
+        <p>
+          The group's reach didn't stop there. MSB expanded into subsidiaries
+          covering e‑loading services, cable services, petrol equipment, farming,
+          and more — each built to fill gaps in underserved sectors with
+          sustainable, forward‑thinking solutions.
+        </p>
+        <p>
+          Today, Channel Technologies Inc. and Channel Solutions Inc. stand as the
+          pillars of a larger, dynamic group serving a broad range of industries —
+          still guided by MSB's core mission: purposeful innovation and smart
+          technology that improves businesses and lives.
+        </p>
+        <a href="#offices" class="btn btn--ghost">Join us now</a>
+      </div>
+      <div class="about__media">
+        <img class="about__img about__img--portrait" src="res/vision.jpg" alt="Channel Technologies — vision and history">
+      </div>
+    </div>
+
+    <div class="about__partner">
+      <div class="about__partner-media">
+        <img class="about__img" src="res/partner.jpg" alt="Channel Technologies — partner, not just a vendor">
+      </div>
+      <div class="about__partner-copy">
+        <h3>A partner, not just a vendor.</h3>
+        <p>
+          We pride ourselves on being more than a vendor — a dedicated partner who
+          understands that our clients' needs are always evolving. Rather than a
+          one‑size‑fits‑all approach, we take the time to listen, adapt, and
+          collaborate closely, keeping things flexible instead of bogging clients
+          down in bureaucracy.
+        </p>
+        <p>
+          At every stage, Channel Technologies provides the support and insight
+          businesses need to navigate challenges and seize opportunities — built
+          on trust, expertise, and a shared vision for long‑term success.
+        </p>
+        <a href="#offices" class="btn btn--ghost">Join us now</a>
+      </div>
+    </div>
+    <span class="section-num" aria-hidden="true">02</span>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section class="capabilities" id="capabilities">
+    <div class="node" data-node="03"><span class="node__ring"></span></div>
+    <p class="eyebrow mono">SIGNAL 03 — HOW WE OPERATE</p>
+    <h2>Four disciplines,<br>one service level.</h2>
+    <div class="cap-grid">
+      <article class="cap-card tilt-card">
+        <span class="cap-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M6 24h6v-8H6v8Zm7 0h6V8h-6v16Zm7 0h6v-5h-6v5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="cap-card__index mono">01</span>
+        <h3>Project Management</h3>
+        <p>PMP‑certified leaders keep mission‑critical rollouts on scope, on
+        schedule, and within the agreed cost and quality.</p>
+      </article>
+      <article class="cap-card tilt-card">
+        <span class="cap-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 5 4 11l12 6 12-6-12-6Zm-8 11 8 4 8-4M8 21l8 4 8-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        </span>
+        <span class="cap-card__index mono">02</span>
+        <h3>Consulting</h3>
+        <p>Seasoned advisors bring lessons from small and large‑scale deployments
+        to steer clients away from avoidable, already‑learned mistakes.</p>
+      </article>
+      <article class="cap-card tilt-card">
+        <span class="cap-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 4v4M16 24v4M4 16h4M24 16h4M7.5 7.5l2.8 2.8M21.7 21.7l2.8 2.8M7.5 24.5l2.8-2.8M21.7 10.3l2.8-2.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <span class="cap-card__index mono">03</span>
+        <h3>Technical Support</h3>
+        <p>Our 2‑2‑0‑0 principle: 2‑hour response, 2‑hour repair, zero repeat
+        calls, zero penalties — backed by 30+ branches nationwide.</p>
+      </article>
+      <article class="cap-card tilt-card">
+        <span class="cap-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><rect x="4" y="4" width="10" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="18" y="18" width="10" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 9h5a3 3 0 0 1 3 3v6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </span>
+        <span class="cap-card__index mono">04</span>
+        <h3>System Integration</h3>
+        <p>Full integration capability across the group's subsidiaries, plus the
+        local expertise global partners need for on‑the‑ground implementation.</p>
+      </article>
+    </div>
+    <span class="section-num" aria-hidden="true">03</span>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <div class="node" data-node="04"><span class="node__ring"></span></div>
+    <p class="eyebrow mono">SIGNAL 04 — PRODUCTS &amp; SOLUTIONS</p>
+    <h2>Cutting‑edge solutions for<br>secure, efficient transactions.</h2>
+    <p class="products__lede">
+      From cash automation to encryption and customer intelligence, our product
+      line equips banks, retailers, and enterprises with future‑ready, secure
+      technology.
+    </p>
+
+    <div class="product-grid">
+
+      <article class="product-card">
+        <span class="product-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><rect x="4" y="8" width="24" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="4" y1="14" x2="28" y2="14" stroke="currentColor" stroke-width="2"/><rect x="8" y="18" width="6" height="3" fill="currentColor"/></svg>
+        </span>
+        <h3>ATM</h3>
+        <p>Automated Teller Machines that eliminate the need for dedicated cash
+        handling staff — evolved from pure dispensing into accept, recycle, and
+        other self‑service functions.</p>
+      </article>
+
+      <article class="product-card">
+        <span class="product-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><rect x="3" y="9" width="26" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="16" r="4" fill="none" stroke="currentColor" stroke-width="2"/><line x1="7" y1="12" x2="7" y2="20" stroke="currentColor" stroke-width="2"/><line x1="25" y1="12" x2="25" y2="20" stroke="currentColor" stroke-width="2"/></svg>
+        </span>
+        <h3>Cash Recycling Machines</h3>
+        <p>Intelligent cash‑handling that automates deposits and withdrawals,
+        cutting cash‑handling costs and improving operational efficiency.</p>
+      </article>
+
+      <article class="product-card">
+        <span class="product-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M6 12h18M20 7l4 5-4 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 20H8M12 15l-4 5 4 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>Payment Gateway</h3>
+        <p>Orchestrates fund movements within the organization and across
+        financial‑services providers via API, supporting BancNet, InstaPay,
+        PesoNet, and other local network messaging.</p>
+      </article>
+
+      <article class="product-card">
+        <span class="product-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><rect x="9" y="3" width="14" height="26" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><line x1="9" y1="23" x2="23" y2="23" stroke="currentColor" stroke-width="2"/><rect x="12" y="9" width="8" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        </span>
+        <h3>mPOS &amp; EFTPOS</h3>
+        <p>An agency‑banking platform enabling electronic funds transfers via
+        debit or credit cards, plus cardless transactions through QR codes.</p>
+      </article>
+
+      <article class="product-card">
+        <span class="product-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><rect x="4" y="4" width="7" height="7" fill="none" stroke="currentColor" stroke-width="2"/><rect x="21" y="4" width="7" height="7" fill="none" stroke="currentColor" stroke-width="2"/><rect x="4" y="21" width="7" height="7" fill="none" stroke="currentColor" stroke-width="2"/><rect x="21" y="21" width="3" height="3" fill="currentColor"/><rect x="26" y="21" width="2" height="2" fill="currentColor"/><rect x="21" y="26" width="2" height="2" fill="currentColor"/><rect x="26" y="26" width="2" height="2" fill="currentColor"/></svg>
+        </span>
+        <h3>QR Code Dispensing</h3>
+        <p>Secure, contactless cash withdrawal technology using QR codes —
+        built for customer convenience and fraud prevention.</p>
+      </article>
+
+      <article class="product-card">
+        <span class="product-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="26" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="26" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="26" cy="26" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M13.5 13.5L8 8M18.5 13.5L24 8M13.5 18.5L8 24M18.5 18.5L24 24" stroke="currentColor" stroke-width="2"/></svg>
+        </span>
+        <h3>EFT Switch</h3>
+        <p>The Millennium Hub — a Windows Server‑based ATM switch system that
+        gives banks 24‑hour banking across ATM, Kiosk, and EFTPOS channels.</p>
+      </article>
+
+      <article class="product-card">
+        <span class="product-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 4l11 4v8c0 8-5 12-11 16-6-4-11-8-11-16V8l11-4Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="12" y="15" width="8" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M14 15v-2a2 2 0 0 1 4 0v2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        </span>
+        <h3>Hardware Security Modules</h3>
+        <p>The industry‑standard encryption component used by major banks
+        worldwide. CTI provides roughly 80% of the HSMs in the Philippines,
+        largely handling PIN encryption for bank customers.</p>
+      </article>
+
+      <article class="product-card">
+        <span class="product-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><ellipse cx="16" cy="7" rx="10" ry="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 7v9c0 1.9 4.5 3.5 10 3.5s10-1.6 10-3.5V7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 16v9c0 1.9 4.5 3.5 10 3.5s10-1.6 10-3.5v-9" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </span>
+        <h3>Customer Information System</h3>
+        <p>A centralized platform integrating customer data across banking
+        channels, enabling personalized service and better decision‑making.</p>
+      </article>
+
+      <article class="product-card">
+        <span class="product-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 4l3.5 7.6L28 13l-6 6 1.4 8.4L16 23.6 8.6 27.4 10 19l-6-6 8.5-1.4L16 4Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>Customer Loyalty Program</h3>
+        <p>Rewards customers with tailored services, including VIP handling,
+        and enables customer profiling so services can be personalized.</p>
+      </article>
+
+    </div>
+    <span class="section-num" aria-hidden="true">04</span>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="node" data-node="05"><span class="node__ring"></span></div>
+    <p class="eyebrow mono">SIGNAL 05 — KEY SERVICES</p>
+    <h2>What moves through<br>the channel.</h2>
+
+    <div class="service-list">
+
+      <article class="service-row">
+        <div class="service-row__head">
+          <span class="service-row__num mono service-row__num--red">01</span>
+          <h3>Maintenance (SLM)</h3>
+        </div>
+        <p>
+          Expert Second Line Maintenance for ATMs, EFT‑POS terminals, retail
+          POS/ECR systems, kiosks, and other self‑service devices. Preventive
+          and corrective service, on‑site and remote repair, and SLA‑driven
+          response keep self‑service infrastructure running at peak efficiency.
+        </p>
+      </article>
+
+      <article class="service-row">
+        <div class="service-row__head">
+          <span class="service-row__num mono service-row__num--orange">02</span>
+          <h3>Hardware Security Modules</h3>
+        </div>
+        <p>
+          Supply, integration, and support for HSMs used in secure transaction
+          processing and data encryption. Deployment and configuration follow
+          PCI‑DSS and FIPS 140‑2, with key management and 24/7 technical
+          support behind every install.
+        </p>
+      </article>
+
+      <article class="service-row">
+        <div class="service-row__head">
+          <span class="service-row__num mono service-row__num--grey">03</span>
+          <h3>Loyalty Systems</h3>
+        </div>
+        <p>
+          Customizable rewards platforms — point‑based, tiered, or cashback —
+          integrated with POS, EFT‑POS, and mobile channels. Data‑driven
+          insights help personalize offers and build long‑term customer
+          retention.
+        </p>
+      </article>
+
+      <article class="service-row">
+        <div class="service-row__head">
+          <span class="service-row__num mono service-row__num--red">04</span>
+          <h3>Cybersecurity</h3>
+        </div>
+        <p>
+          Delivered with top global partners: network and endpoint security,
+          threat detection, and secure access management aligned to PCI‑DSS
+          and ISO 27001, with encryption, penetration testing, and real‑time
+          monitoring.
+        </p>
+      </article>
+
+    </div>
+    <span class="section-num" aria-hidden="true">05</span>
+  </section>
+
+  <!-- NATIONWIDE SUPPORT -->
+  <section class="nationwide" id="nationwide">
+    <div class="node" data-node="06"><span class="node__ring"></span></div>
+    <p class="eyebrow mono">SIGNAL 06 — NATIONWIDE SUPPORT</p>
+    <h2>Built for rapid response,<br>wherever you are.</h2>
+    <p class="nationwide__lede">
+      We provide fast, reliable service through a nationwide presence — strategically
+      placed service hubs, mobile field teams, and an advanced logistics network that
+      support businesses across industries with quick, effective solutions.
+    </p>
+    <div class="support-grid">
+      <article class="support-card">
+        <span class="support-card__index mono">01</span>
+        <h3>Strategic Service Hubs</h3>
+        <p>Located in key regions to support fast repairs, maintenance, and installations.</p>
+      </article>
+      <article class="support-card">
+        <span class="support-card__index mono">02</span>
+        <h3>Mobile Field Teams</h3>
+        <p>Equipped for on‑site troubleshooting and emergency repairs, minimizing downtime.</p>
+      </article>
+      <article class="support-card">
+        <span class="support-card__index mono">03</span>
+        <h3>Efficient Logistics Network</h3>
+        <p>Ensuring critical components are always available to prevent delays.</p>
+      </article>
+      <article class="support-card">
+        <span class="support-card__index mono">04</span>
+        <h3>24/7 Support</h3>
+        <p>Immediate response through remote diagnostics or on‑site deployment.</p>
+      </article>
+      <article class="support-card">
+        <span class="support-card__index mono">05</span>
+        <h3>Preventive Maintenance</h3>
+        <p>Monitoring tools detect and resolve issues before they escalate.</p>
+      </article>
+      <article class="support-card">
+        <span class="support-card__index mono">06</span>
+        <h3>Priority Escalation</h3>
+        <p>Mission‑critical problems receive immediate attention for fast resolution.</p>
+      </article>
+    </div>
+    <p class="nationwide__tagline mono">INDUSTRY‑LEADING SLA COMPLIANCE · HIGH FIRST‑TIME RESOLUTION · GUARANTEED UPTIME</p>
+    <span class="section-num" aria-hidden="true">06</span>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="partners" id="partners">
+    <svg class="dot-cluster dot-cluster--partners" viewBox="0 0 220 220" aria-hidden="true">
+      <circle cx="30"  cy="190" r="14" fill="var(--orange)"/>
+      <circle cx="65"  cy="165" r="8"  fill="var(--red)"/>
+      <circle cx="10"  cy="150" r="6"  fill="var(--grey)"/>
+      <circle cx="55"  cy="200" r="6"  fill="var(--red)"/>
+      <circle cx="95"  cy="180" r="10" fill="var(--grey)"/>
+    </svg>
+    <div class="node" data-node="07"><span class="node__ring"></span></div>
+    <p class="eyebrow mono">SIGNAL 07 — GLOBAL PARTNERS</p>
+    <h2>Trusted local partner<br>to world‑class brands.</h2>
+    <div class="partner-marquee">
+      <ul class="partner-track partner-track--forward">
+        <li class="pill pill--red">Thales</li><li class="pill pill--orange">Hyosung</li><li class="pill pill--ink">ACI</li><li class="pill pill--red">OKI</li>
+        <li class="pill pill--orange">SmartPeak</li><li class="pill pill--ink">SNBC</li><li class="pill pill--red">Xceptor</li>
+        <li class="pill pill--red">Thales</li><li class="pill pill--orange">Hyosung</li><li class="pill pill--ink">ACI</li><li class="pill pill--red">OKI</li>
+        <li class="pill pill--orange">SmartPeak</li><li class="pill pill--ink">SNBC</li><li class="pill pill--red">Xceptor</li>
+      </ul>
+    </div>
+    <span class="section-num section-num--light" aria-hidden="true">07</span>
+  </section>
+
+  <!-- OFFICES / CONTACT -->
+  <section class="offices" id="offices">
+    <svg class="dot-cluster dot-cluster--offices" viewBox="0 0 220 220" aria-hidden="true">
+      <circle cx="185" cy="35" r="15" fill="var(--red-tint)"/>
+      <circle cx="150" cy="15" r="8"  fill="var(--orange)"/>
+      <circle cx="205" cy="70" r="7"  fill="var(--red)"/>
+      <circle cx="130" cy="55" r="6"  fill="var(--grey)"/>
+    </svg>
+    <div class="node node--light" data-node="08"><span class="node__ring"></span></div>
+    <p class="eyebrow mono">SIGNAL 08 — GET IN TOUCH</p>
+    <div class="offices__grid">
+      <div class="offices__intro">
+        <h2>Let's get<br>in the channel.</h2>
+        <p>Tell us about your maintenance, security, or integration needs and
+        our team will route it to the right branch.</p>
+
+        <div class="office-card" data-office="makati">
+          <img class="office-card__logo" src="res/csi.png" alt="Channel Solutions Inc. logo">
+          <h4>Makati Office</h4>
+          <p>Suite 218, The Atrium of Makati,<br>Makati Ave., Makati City</p>
+          <p class="mono">+63 (2) 8811‑4293</p>
+          <p class="mono">+63 (2) 8811‑4371</p>
+          <p class="mono">+63 (2) 8811‑4337</p>
+          <button type="button" class="office-card__pin" data-office="makati">View on map</button>
+        </div>
+
+        <div class="office-card is-active" data-office="muntinlupa">
+          <img class="office-card__logo" src="res/cgc.png" alt="Channel Group of Companies logo">
+          <h4>Muntinlupa Office <span class="office-card__tag mono">Main</span></h4>
+          <p>55 Don Jesus Blvd., Alabang Hills,<br>Muntinlupa City</p>
+          <p class="mono">+63 (2) 8869‑1274</p>
+          <p class="mono">+63 (2) 8772‑3456</p>
+          <p class="mono">+63 (2) 8772‑3453</p>
+          <button type="button" class="office-card__pin" data-office="muntinlupa">View on map</button>
+        </div>
+
+        <div class="office-card" data-office="quezoncity">
+          <img class="office-card__logo" src="res/logo.png" alt="Channel Technologies Inc. logo">
+          <h4>Quezon City Office</h4>
+          <p>1198 CASMAN Building, Quezon Avenue,<br>Barangay Paligsahan, Quezon City</p>
+          <p class="mono">+63 (2) 8355‑9425</p>
+          <button type="button" class="office-card__pin" data-office="quezoncity">View on map</button>
+        </div>
+      </div>
+
+      <div class="offices__contact">
+        <div class="map-panel">
+          <div class="map-panel__tabs" role="tablist" aria-label="Office locations">
+            <button type="button" class="map-tab is-active" data-office="muntinlupa">Muntinlupa <span class="mono">Main</span></button>
+            <button type="button" class="map-tab" data-office="makati">Makati</button>
+            <button type="button" class="map-tab" data-office="quezoncity">Quezon City</button>
+          </div>
+          <iframe
+            class="map-panel__frame"
+            id="officeMap"
+            title="Channel Technologies office locations"
+            src="https://www.google.com/maps?q=55+Don+Jesus+Blvd,+Alabang+Hills,+Muntinlupa+City,+Philippines&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+
+        <div class="quote-panel">
+          <h4 class="quote-panel__title">Get a Quote</h4>
+          <form class="quote-form" id="quoteForm">
+            <div class="quote-form__row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service…</option>
+                <option value="Maintenance (SLM)">Maintenance (SLM)</option>
+                <option value="Hardware Security Modules">Hardware Security Modules</option>
+                <option value="Loyalty Systems">Loyalty Systems</option>
+                <option value="Cybersecurity">Cybersecurity</option>
+                <option value="Project Management">Project Management</option>
+                <option value="Consulting">Consulting</option>
+                <option value="Technical Support">Technical Support</option>
+                <option value="System Integration">System Integration</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="2"></textarea>
+            </div>
+            <button type="submit" class="btn btn--solid btn--full"><span>Send Request</span><i class="btn__arrow">→</i></button>
+            <p class="form-note mono" id="formNote" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <span class="section-num section-num--light" aria-hidden="true">08</span>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer__top">
+    <a class="logo logo--footer" href="#top">
+      <img class="logo__img" src="res/logo.png" alt="Channel Technologies Inc.">
+    </a>
+    <ul class="footer__links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#capabilities">Capabilities</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#partners">Partners</a></li>
+      <li><a href="#offices">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer__bottom">
+    <span>© <span id="year"></span> Channel Technologies, Inc. — part of the Channel Group of Companies.</span>
+    <span class="mono">MUNTINLUPA · MAKATI · NATIONWIDE</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
