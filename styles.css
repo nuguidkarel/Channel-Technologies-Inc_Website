@@ -209,24 +209,6 @@ section{ opacity:1; transform:none; transition: opacity 0.6s ease, transform 0.6
 }
 section h2{ font-size: clamp(1.9rem, 3.4vw, 2.9rem); margin-bottom: 28px; }
 
-/* Giant corner numeral — echoes the brand guide's oversized page numbers */
-.section-num{
-  position:absolute;
-  right: clamp(16px, 4vw, 48px);
-  bottom: 18px;
-  font-family: var(--font-display);
-  font-weight:700;
-  font-size: clamp(3.2rem, 8vw, 6rem);
-  color: var(--red);
-  opacity: 0.14;
-  line-height:1;
-  z-index:0;
-  pointer-events:none;
-  user-select:none;
-}
-.section-num--light{ color: var(--orange); opacity:0.22; }
-@media (max-width: 700px){ .section-num{ display:none; } }
-
 /* ============================================================
    Hero
    ============================================================ */
@@ -330,6 +312,16 @@ section h2{ font-size: clamp(1.9rem, 3.4vw, 2.9rem); margin-bottom: 28px; }
 @keyframes badge-spin{ from{ transform:rotate(0deg); } to{ transform:rotate(360deg); } }
 @keyframes badge-spin-reverse{ from{ transform:rotate(0deg); } to{ transform:rotate(-360deg); } }
 @media (max-width: 760px){ .hero__badge{ display:none; } }
+
+.hero__logo{
+  height: 56px;
+  width: auto;
+  margin-bottom: 28px;
+}
+@media (max-width: 480px){
+  .hero__logo{ height: 44px; margin-bottom: 20px; }
+}
+
 .hero__title{
   font-size: clamp(2.4rem, 6vw, 4.6rem);
   max-width: 16ch;
@@ -739,6 +731,29 @@ section h2{ font-size: clamp(1.9rem, 3.4vw, 2.9rem); margin-bottom: 28px; }
   transform: translateY(-3px) rotate(-2deg);
   border-color: currentColor;
   background: rgba(255,255,255,0.06);
+}
+
+.pill--logo{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 14px 30px;
+  background: rgba(255,255,255,0.96);
+  border-color: rgba(255,255,255,0.1);
+}
+.pill--logo img{
+  height: 28px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.pill--logo:hover{ background:#fff; }
+.pill--logo:hover img{ opacity:1; }
+@media (max-width: 700px){
+  .pill--logo{ padding: 12px 22px; }
+  .pill--logo img{ height: 24px; }
 }
 @keyframes scroll-left{
   from{ transform: translateX(0); }
